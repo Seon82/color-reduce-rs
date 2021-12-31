@@ -7,7 +7,7 @@ pub use colorspace::mix_colors;
 use distances::{dist_cie2000_squared, dist_luma, dist_redmean_squared};
 use image::{Rgb, RgbImage};
 use lab::Lab;
-use palette::{BasePalette, ExtendedPalette};
+pub use palette::{BasePalette, ExtendedPalette};
 use std::collections::HashMap;
 
 pub enum QuantizeMethod {

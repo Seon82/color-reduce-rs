@@ -8,25 +8,15 @@ Use this library in your project by adding ``color-reduce : {git: "https://githu
 ## Quickstart
 
 ```rust
-use color_reduce::{QuantizeMethod, quantize};
+use color_reduce;
+use color_reduce::{quantize, BasePalette, QuantizeMethod};
 
 fn main() {
     let mut img = image::open("path/to/image").unwrap().to_rgb8();
-    let palette = get_palette();
+    // Palette used on pxls.space
+    let palette = BasePalette::pxls();
     // Modify the buffer in place
     quantize(&mut img, &palette, QuantizeMethod::CIE2000, Some(255));
     img.save("output/image/path").unwrap();
 }
-
-fn get_palette() -> BasePalette {
-    BasePalette::new(vec![
-        [0, 0, 0],
-        [34, 34, 34],
-        [85, 85, 85],
-        [136, 136, 136],
-        [205, 205, 205],
-        [255, 255, 255],
-    ])
-}
-
 ```
