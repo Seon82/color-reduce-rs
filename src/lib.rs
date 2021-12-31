@@ -1,6 +1,6 @@
 mod colorspace;
 pub mod distances;
-mod palette;
+pub mod palette;
 
 pub use colorspace::mix_colors;
 

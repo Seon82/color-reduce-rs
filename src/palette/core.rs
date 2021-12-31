@@ -1,3 +1,4 @@
+use super::pxls::pxls_palette;
 use crate::distances::dist_cie2000;
 use crate::mix_colors;
 use lab::Lab;
@@ -16,6 +17,9 @@ impl BasePalette {
             rgb_colors,
             lab_colors,
         }
+    }
+    pub fn pxls() -> BasePalette {
+        pxls_palette()
     }
 }
 
