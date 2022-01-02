@@ -1,5 +1,5 @@
 pub fn dist_redmean_squared(color_1: &[u8; 3], color_2: &[u8; 3]) -> f32 {
-    let r_mean = (color_1[0] + color_2[0]) as f32 / 2.;
+    let r_mean = (color_1[0] as f32 + color_2[0] as f32) / 2.;
     let dr = color_1[0] as f32 - color_2[0] as f32;
     let dg = color_1[1] as f32 - color_2[1] as f32;
     let db = color_1[2] as f32 - color_2[2] as f32;
